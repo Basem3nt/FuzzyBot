@@ -110,4 +110,4 @@ Pipfile.lock
 
 nohup.out
 media/
-static/
+staticfiles/
