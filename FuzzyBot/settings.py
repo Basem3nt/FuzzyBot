@@ -75,18 +75,25 @@ WSGI_APPLICATION = 'FuzzyBot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+DB_NAME = config("DB_NAME", None) if config(
+    "DB_NAME", None) is not None else os.environ.get('DB_NAME', None)
+DB_USER = config("DB_USER", None) if config(
+    "DB_USER", None) is not None else os.environ.get('DB_USER', None)
+USER_PASSWORD = config("USER_PASSWORD", None) if config(
+    "USER_PASSWORD", None) is not None else os.environ.get('USER_PASSWORD', None)
+HOST = config("HOST", None) if config(
+    "HOST", None) is not None else os.environ.get('HOST', None)
+PORT = 5432  # meeh!
+
+
 DATABASES = {
-    # 'default': { # TODO: handle later.
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config("DB_NAME", None),
-        'USER': config("DB_USER", None),
-        'PASSWORD': config("USER_PASSWORD", None),
-        'HOST': config("DB_HOST", "localhost"),
-        'PORT': config("DB_PORT", 5432),
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': USER_PASSWORD,
+        'HOST': HOST,
+        'PORT': PORT,
     }
 }
 
