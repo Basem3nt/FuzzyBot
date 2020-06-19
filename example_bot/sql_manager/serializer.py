@@ -19,7 +19,6 @@ class UserSerializer(serializers.ModelSerializer):
         """
         attrs["user_id"] = str(uuid4())[:12]
         attrs["last_contacted_at"] = timezone.now()
-        attrs["user_status"] = "init"
         return attrs
 
 
