@@ -30,6 +30,9 @@ ALLOWED_HOSTS = ['*']  # TODO: handle later
 
 
 # Application definition
+USER_APP = [
+    'example_bot.apps.ExampleBotConfig',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+] + USER_APP
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
