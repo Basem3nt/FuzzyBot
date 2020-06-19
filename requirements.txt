@@ -1,10 +1,16 @@
+certifi==2020.4.5.2
+chardet==3.0.4
 Django==2.2.13
 djangorestframework==3.11.0
 gunicorn==20.0.4
-messenger-bot-library==2.0.2b0
+idna==2.9
+messenger-bot-library==2.0.3b0
 phonenumbers==8.12.5
 psycopg2-binary==2.8.5
+pyfiglet==0.8.post1
 python-decouple==3.3
 pytz==2020.1
+requests==2.24.0
 sqlparse==0.3.1
+urllib3==1.25.9
 whitenoise==5.1.0
