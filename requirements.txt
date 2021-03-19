@@ -1,7 +1,7 @@
 certifi==2020.4.5.2
 chardet==3.0.4
 Django==2.2.13
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 gunicorn==20.0.4
 idna==2.9
 messenger-bot-library==2.0.3b0
